@@ -11,15 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var helloWorldLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet var nameTextField2: UITextField!
+    let defaultName = "anonymous"
     override func viewDidLoad() {
         super.viewDidLoad()
-        helloWorldLabel.text = "viewDidLoad"
         // Do any additional setup after loading the view.
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
         print("Button Pressed");
-        helloWorldLabel.text = "Hello Fellow!"
+        helloWorldLabel.text = "Hello " + nameTextField.text!
     }
     
 }
